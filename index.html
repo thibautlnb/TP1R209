@@ -73,23 +73,23 @@
         ></textarea>
       </div>
 
-      <div class="field">
-        <label class="required">Niveau d'urgence</label>
-        <div class="radio-group" role="group" aria-labelledby="urgence-label">
-          <span class="radio-option">
-            <input type="radio" id="urgent" name="urgence" value="urgent" />
-            <label for="urgent">Urgent</label>
-          </span>
-          <span class="radio-option">
-            <input type="radio" id="normal" name="urgence" value="normal" />
-            <label for="normal">Normal</label>
-          </span>
-          <span class="radio-option">
-            <input type="radio" id="lent" name="urgence" value="lent" checked />
-            <label for="lent">Lent</label>
-          </span>
-        </div>
-      </div>
+<fieldset class="field">
+  <legend class="required">Niveau d'urgence</legend>
+  <div class="radio-group">
+    <span class="radio-option">
+      <input type="radio" id="urgent" name="urgence" value="urgent" />
+      <label for="urgent">Urgent</label>
+    </span>
+    <span class="radio-option">
+      <input type="radio" id="normal" name="urgence" value="normal" />
+      <label for="normal">Normal</label>
+    </span>
+    <span class="radio-option">
+      <input type="radio" id="lent" name="urgence" value="lent" checked />
+      <label for="lent">Lent</label>
+    </span>
+  </div>
+</fieldset>
 
       <div class="checkbox-field">
         <input type="checkbox" id="confidentialite" name="confidentialite" required />

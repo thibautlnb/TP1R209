@@ -174,6 +174,19 @@ textarea {
 
 .btn-submit:hover {
   background-color: var(--accent-hover);
+  scale: 105%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset legend {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
 }
 
 @media (min-width: 640px) {
