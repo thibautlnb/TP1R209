@@ -1,0 +1,185 @@
+:root {
+  --bg: #f4f4f4;
+  --card: #ffffff;
+  --border: #cccccc;
+  --border-focus: #3a6ea5;
+  --text: #222222;
+  --text-light: #666666;
+  --accent: #3a6ea5;
+  --accent-hover: #2a5080;
+  --error: #cc0000;
+  --radius: 4px;
+  --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: var(--font);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.form-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  width: 100%;
+  max-width: 560px;
+}
+
+.form-card h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.75rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.1rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.required::after {
+  content: ' *';
+  color: var(--error);
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.875rem;
+  font-family: var(--font);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: #fff;
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(58, 110, 165, 0.15);
+}
+
+::placeholder {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.checkbox-field input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checkbox-field label {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.checkbox-field a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.checkbox-field a:hover {
+  color: var(--accent-hover);
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 0.65rem;
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-hover);
+}
+
+@media (min-width: 640px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.2rem;
+  }
+}

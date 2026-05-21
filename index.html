@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire de contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="form-card">
+    <h1>Formulaire de contact</h1>
+
+    <form action="#" method="post" novalidate>
+
+      <div class="grid-2">
+
+        <div class="field">
+          <label for="pseudo" class="required">Votre Pseudo</label>
+          <input
+            type="text"
+            id="pseudo"
+            name="pseudo"
+            placeholder="Votre pseudo"
+            required
+            autocomplete="username"
+          />
+        </div>
+
+        <div class="field">
+          <label for="password" class="required">Votre Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Votre mot de passe"
+            required
+            autocomplete="current-password"
+          />
+        </div>
+
+      </div>
+      <div class="field">
+        <label for="email" class="required">Votre e-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Votre adresse e-mail"
+          required
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="field">
+        <label for="objet" class="required">Objet du message</label>
+        <select id="objet" name="objet" required>
+          <option value="">-- Choisissez un objet --</option>
+          <option value="question">J'ai une question</option>
+          <option value="suggestion">Je fais une suggestion</option>
+          <option value="probleme">Je rencontre un problème</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message" class="required">Votre message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Votre message"
+          required
+        ></textarea>
+      </div>
+
+      <div class="field">
+        <label class="required">Niveau d'urgence</label>
+        <div class="radio-group" role="group" aria-labelledby="urgence-label">
+          <span class="radio-option">
+            <input type="radio" id="urgent" name="urgence" value="urgent" />
+            <label for="urgent">Urgent</label>
+          </span>
+          <span class="radio-option">
+            <input type="radio" id="normal" name="urgence" value="normal" />
+            <label for="normal">Normal</label>
+          </span>
+          <span class="radio-option">
+            <input type="radio" id="lent" name="urgence" value="lent" checked />
+            <label for="lent">Lent</label>
+          </span>
+        </div>
+      </div>
+
+      <div class="checkbox-field">
+        <input type="checkbox" id="confidentialite" name="confidentialite" required />
+        <label for="confidentialite">
+          J'ai lu et j'accepte la
+          <a href="#" target="_blank">politique de confidentialité</a>
+          du site.
+        </label>
+      </div>
+
+      <button type="submit" class="btn-submit">Envoyer</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
